@@ -121,7 +121,7 @@ function displayServices(){
 	}
 }
 
-*/
+
 
 //animating projects
 var projects = document.querySelectorAll('.prj');
@@ -157,3 +157,5 @@ function animateprj(){
 	})
 	}
 }
+
+*/
