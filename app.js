@@ -67,23 +67,25 @@ function animate(){
 	if (inView()){
 		Array.from(one).forEach( (div, index) => {
 			div.style.animation = '';
-			div.style.animation = `loadone 1s forwards ${index / 7}s`;
+			div.style.animation = `loadone .8s forwards ${index / 7}s`;
 		})
 		Array.from(two).forEach( (div, index) => {
 			div.style.animation = '';
-			div.style.animation = `loadtwo 1s forwards ${index / 7}s`;
+			div.style.animation = `loadtwo .8s forwards ${index / 7}s`;
 		})
 		Array.from(three).forEach( (div, index) => {
 			div.style.animation = '';
-			div.style.animation = `loadthree 1s forwards ${index / 7}s`;
+			div.style.animation = `loadthree .8s forwards ${index / 7}s`;
 		})
 		Array.from(four).forEach( (div, index) => {
 			div.style.animation = '';
-			div.style.animation = `loadfour 1s forwards ${index / 7}s`;
+			div.style.animation = `loadfour .8s forwards ${index / 7}s`;
 		})
 
 	}
 }
+
+/*
 
 //animating the services
 var serv = document.querySelectorAll('.serv');
@@ -119,6 +121,7 @@ function displayServices(){
 	}
 }
 
+*/
 
 //animating projects
 var projects = document.querySelectorAll('.prj');

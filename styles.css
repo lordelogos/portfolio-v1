@@ -580,7 +580,7 @@ html{
 }
 
 .serv{
-	opacity: 0;
+	opacity: 1;
 	width: 25vw;
 	text-align: center;
 }
@@ -774,6 +774,13 @@ html{
 .prjlink:hover{
 	transition: 0.3s;
 	background-color: var(--c6);
+}
+
+
+@media screen and (max-width: 600px){
+	.prj{
+		margin: 3vh 0 ;
+	}
 }
 
 
