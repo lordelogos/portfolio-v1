@@ -780,6 +780,7 @@ html{
 @media screen and (max-width: 600px){
 	.prj{
 		margin: 3vh 0 ;
+		width: 80%;
 	}
 }
 
