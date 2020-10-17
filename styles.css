@@ -340,6 +340,20 @@ html{
 	background: linear-gradient(180deg,#ff8af5 0,#fc35ec 100%);
 }
 
+@media screen and (max-width: 768px){
+	#hero-text{
+		width: 80%;
+	}
+
+	#title{
+		font-size: 2em;
+	}
+
+	#subs{
+		font-size: .9em;
+	}
+
+}
 /* about section styling */
 
 #about{
