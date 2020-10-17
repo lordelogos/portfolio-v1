@@ -246,18 +246,83 @@ html{
 }
 
 #title{
+	transition: .8s;
 	font-size: 4vw;
 	font-weight: 600;
+	opacity: 0;
+	transform: translateY(-100vh);
+	animation: textjump 1s forwards;
+}
+
+
+@keyframes textjump{
+	from{
+		opacity: 0;
+		transform: translateY(-100vh);
+	}
+
+	to{
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes textslide{
+	from{
+		opacity: 0;
+		transform: translateX(-100vw);
+	}
+
+	to{
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes buttonpop{
+	from{
+		opacity: 1;
+		transform: scale(.1);
+		color: var(--c6);
+	}
+
+	30%{
+		opacity: 1;
+		transform: scale(1);
+		color: rgba(255,255,255, .8);
+	}
+
+	60%{
+		opacity: 1;
+		transform: scale(1.2);
+		color: rgba(255,255,255, .8);
+		transform: translateY(-10%);
+	}
+
+	90%{
+		opacity: 1;
+		transform: scale(.9);
+		color: rgba(255,255,255, .8);
+		transform: translateY(5%);
+	}
+
+	to{
+		opacity: 1;
+		transform: scale(1);
+		color: rgba(255,255,255, .8);
+		transform: translateY(0);
+	}
 }
 
 #subs{
-	font-size: 1.5vw;
-
+	font-size: 2vw;
+	opacity: 0;
+	transform: translateX(-100vw);
+	animation: textslide .9s 1s forwards
 }
 
 #getStarted{
 	font-size: 1em;
-	color: rgba(255,255,255, .8);
 	background: linear-gradient(180deg,#fc4eee 0,#e805d5 100%);
 	padding: 15px;
 	margin: 5vh 0 0 0;
@@ -265,6 +330,10 @@ html{
 	border-radius: 25px;
 	cursor: pointer;
 	box-shadow: 0 2px 3px rgba(0,0,0,.5);
+	color: var(--c6);
+	font-weight: 600;
+	opacity: 0;
+	animation: buttonpop .8s 1.7s forwards;
 }
 
 #getStarted:hover{
@@ -510,16 +579,17 @@ html{
 
 }
 
-
-
 #services{
-	width: 100%;
-	text-align: center;
-	margin-bottom: 8vh;
+	padding-top: 5vh;
+	background-color: #89d4cf;
+	background-image: linear-gradient(315deg, #89d4cf 0%, #6e45e1 74%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 #servlabel{
-	color: var(--c4);
+	color: white;
 	font-size: 2em;
 	font-weight: 600;
 	text-transform: uppercase;
@@ -530,7 +600,7 @@ html{
 	content: "";
 	display: block;
 	margin: 20px auto;
-	border-bottom: solid var(--c4) 3px;
+	border-bottom: solid white 3px;
 	width: 70px;
 }
 
@@ -539,93 +609,69 @@ html{
 	width: 140px;
 }
 
+
 #servicelist{
-	margin: 3vh auto auto auto;
-	width: 90%;
 	display: flex;
-	justify-content: space-between;
-
-}
-
-#servicelist2{
-	margin: 3vh auto auto auto;
-	width: 60%;
-	display: flex;
-	justify-content: space-between;
-
-}
-
-.serv svg{
-	width: 60px;
-	height: 120px;
-}
-
-.servName{
-	display: block;
-	font-size: 1.2em;
-	font-weight: 600;
-	color: var(--c4);
-	margin-bottom: 3vh;
-}
-
-.servDesc{
-	line-height: 4vh;
-}
-
-
-@media screen and (min-width: 1000px){
-	.servDesc{
-		line-height: 6vh;
-	}
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-around;
+	margin: auto;
+	width: 80%;
 }
 
 .serv{
-	opacity: 1;
-	width: 25vw;
+	transition: .8s;
+	width: 225px;
+	height: 300px;
+	position: relative;
+	margin: 5vh;
+	background-color: #d9e4f5;
+	background-image: linear-gradient(315deg, #d9e4f5 0%, #f5e3e6 74%);
+}
+
+.serv svg{
+	transition: .8s;
+	position: absolute;
+	width: 150px;
+	height: 150px;
+	top: 20%;
+	left: 17%;
+}
+
+.servName{
+	transition: .8s;
+	color: var(--c2);
+	position: absolute;
+	top: 75%;
+	margin: auto;
+	width: 100%;
 	text-align: center;
+	font-weight: 800;
+	font-size: 18px;
 }
 
-@media screen and (max-width: 1024px){
-	.servDesc{
-		line-height: 3vh;
-	}
+.servDesc{
+	transition: .8s;
+	position: absolute;
+	top: 30%;
+	padding: 0 3vh;
+	text-align: center;
+	font-weight: 600;
+	opacity: 0;
+	font-size: 17px;
+	color: var(--c2);
 }
 
-@media screen and (max-width: 990px){
-	#servicelist, #servicelist2{
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-
-	.servDesc{
-		line-height: 3vh;
-	}
-
-	.serv{
-		width: 50vw;
-	}
-
+.serv:hover .servDesc{
+	opacity: 1;
 }
 
-@media screen and (max-width: 500px){
-	.serv{
-		width: 70%;
-	}
+.serv:hover .servName{
+	opacity: 0;
 }
 
-@keyframes visibleServ{
-	from{
-		opacity: 0;
-		transform: scale(1.2);
-	}
-
-	to{
-		opacity: 100%;
-		transform: scale(1);
-}
-
+.serv:hover svg{
+	opacity: 0;
 }
 
 /* Portfolio styles */
