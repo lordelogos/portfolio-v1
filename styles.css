@@ -404,13 +404,9 @@ html{
 
 #about2{
 	width: 100%;
-	text-align: center;
-}
-
-#about-skill{
-	margin-top: 3vh;
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 }
 
 .fcc{
@@ -463,62 +459,42 @@ html{
 	fill: #30d160;
 }
 
-
-.bg{
+#about-skill{
 	margin: auto;
 	width: 80%;
-	height: 30px;
-	background-color: var(--c1);
-	margin-bottom: 10px;
-	text-align: right; 
+	margin-top: 5vh;
 	display: flex;
+	flex-wrap: wrap;
+}
+
+.bg{
+	transition: .5s;
+	width: 33%;
+	margin-bottom: 3vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+.svg svg{
+	width: 50px;
+	height: 60px;
 }
 
 .bg-name{
-	width: 20%;
-	height: 100%;
-	background-color: var(--c4);
-	color: white;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.bg-name p{
-	font-size: 1vw;
 	font-weight: 600;
+	color: var(--c4);
+	margin: 0;
+	padding: 0;
+}
+
+.bg:hover{
+	transform: translateY(-10%);
 }
 
 
-#a1{
-	padding-top: 2vh;
-}
-
-#html, #css{
-	height: 100%;
-	background-color: var(--c5);
-}
-
-#js, #illustrator{
-	height: 100%;
-	background-color: var(--c5);
-}
-
-#figma, #ui{
-	height: 100%;
-	background-color: var(--c5);
-}
-
-
-
-#photoshop{
-	height: 100%;
-	background-color: var(--c5);
-}
-
-.one, .two, .three, .four{
-	width: 0;
-}
 
 @media screen and (max-width: 1000px){
 	#about{
@@ -549,49 +525,7 @@ html{
 	}
 }
 
-@keyframes loadone{
-	from{
-		width: 0%;
-	}
 
-	to{
-		width: 70%;
-	}
-
-}
-
-@keyframes loadtwo{
-	from{
-		width: 0%;
-	}
-
-	to{
-		width: 60%;
-	}
-
-}
-
-@keyframes loadthree{
-	from{
-		width: 0%;
-	}
-
-	to{
-		width: 40%;
-	}
-
-}
-
-@keyframes loadfour{
-	from{
-		width: 0%;
-	}
-
-	to{
-		width: 30%;
-	}
-
-}
 
 #services{
 	padding-top: 5vh;

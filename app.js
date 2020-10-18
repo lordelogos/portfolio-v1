@@ -29,6 +29,7 @@ hamburger.addEventListener('click', () => {
 	hamburger.classList.toggle('toggle');
 })
 
+/*
 //loadbar animation
 var element = document.getElementById('photoshop');
 var elementHeight = element.clientHeight;
@@ -85,7 +86,6 @@ function animate(){
 	}
 }
 
-/*
 
 //animating the services
 var serv = document.querySelectorAll('.serv');
