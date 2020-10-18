@@ -193,7 +193,6 @@ html{
 
 	.nav li{
 		padding: 15px 0;
-		opacity: 0;
 	}
 
 }
@@ -201,18 +200,6 @@ html{
 .nav-active{
 	transition: 0.5s;
 	transform: translateX(0);
-}
-
-@keyframes navFade{
-	from{
-		opacity: 0;
-		transform: translateX(50px);
-	}
-
-	to{
-		opacity: 1;
-		transform: translateX(0);
-	}
 }
 
 .toggle #bar1{

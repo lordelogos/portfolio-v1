@@ -14,20 +14,25 @@ var hamburger = document.querySelector('#hamburger');
 var nav = document.querySelector('.nav');
 var navLinks = document.querySelectorAll('.nav li');
 
+//close nav by li
+Array.from(navLinks).forEach(li => li.addEventListener('click', ()=>{
+	if(hamburger.classList.contains('toggle')){
+		hamburger.classList.remove('toggle')
+	}
+	if(nav.classList.contains('nav-active')){
+		nav.classList.remove('nav-active')
+	}
+}))
+
 //toggle nav
 hamburger.addEventListener('click', () => {
 	nav.classList.toggle('nav-active');
-	Array.from(navLinks).forEach( (li, index) => {
-		if (li.style.animation){
-			li.style.animation = '';
-		}else {
-			li.style.animation = `navFade 0.5s forwards ${index / 7 + .5}s`
-		}
-	})
 
 	//burger animation
 	hamburger.classList.toggle('toggle');
 })
+
+
 
 /*
 //loadbar animation
