@@ -122,7 +122,7 @@ html{
 
 
 .nav{
-	transition: 0.6s;
+	
 }
 
 .nav ul{
@@ -198,7 +198,7 @@ html{
 }
 
 .nav-active{
-	transition: 0.5s;
+	transition: 0.6s;
 	transform: translateX(0);
 }
 
@@ -653,6 +653,16 @@ html{
 	height: 250px;
 	border-radius: 10px;
 	margin: 3vh 3vh;
+}
+
+.codelink{
+	transition: .1s;
+	color: var(--c6);
+	font-weight: 600;
+}
+
+.codelink:hover{
+	text-decoration: underline;
 }
 
 #moreprj{
