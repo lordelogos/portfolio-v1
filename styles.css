@@ -875,7 +875,7 @@ html{
 .tooltip .tooltiptext {
 	transition: 0.3s;
   visibility: hidden;
-  width: 120px;
+  width: 180px;
   background-color: black;
   color: #fff;
   text-align: center;
@@ -883,8 +883,8 @@ html{
   padding: 5px 0;
   position: absolute;
   z-index: 1;
-  bottom: 150%;
-  left: 50%;
+  bottom: 120%;
+  left: 20%;
   margin-left: -60px;
 }
 
