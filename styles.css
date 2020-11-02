@@ -325,6 +325,7 @@ html{
 
 #getStarted:hover{
 	background: linear-gradient(180deg,#ff8af5 0,#fc35ec 100%);
+	box-shadow: none;
 }
 
 @media screen and (max-width: 768px){
